@@ -1,0 +1,286 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#btn{
+    position: fixed;
+    width: 7vw;
+    height: 5vh;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    border: 1px solid grey;
+    outline: black;
+    background-color: whitesmoke;
+    color: black;
+    overflow: hidden;
+    margin: 2.5vw;
+    font-size: 1vw;
+    font-family: cursive;
+}
+
+#navigater{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 15vw;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+}
+
+#navigater #upper {
+ position: relative;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 10vh;
+ border-bottom: 2px solid grey ;
+
+}
+#navigater #upper #heading {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+}
+
+#navigater #upper #heading img{
+    position: relative;
+    top: 1.8vh;
+    left: 1vh;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 23px;
+        
+}
+#navigater #upper #heading span{
+    position: absolute;
+    top: 2.5vh;
+    color: aliceblue;
+    font-size: 1.7vw;
+    font-family: cursive;
+    font-weight: 500;
+    margin-left: 3vh;
+    
+}
+
+
+
+#navigater #lower{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+
+}
+#navigater #lower h2 {
+    position: relative;
+    font-size: 2.5vw;
+    top: 1vh;
+    left: 10px;
+    color: white;
+
+}
+
+#navigater #lower #songType{
+    position: relative;
+    top: 2vh;
+    left: 10px;
+    color: whitesmoke;
+
+}
+#navigater #lower #songType .list{
+    margin: 5px 2px;
+    cursor: pointer;
+    
+}
+
+#navigater #lower #songType .list.active {
+    background-color: rgba(95, 93, 93, 0.5);
+    width: 15vh;
+    padding: 3px;
+}
+
+
+
+#song{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#song #songHeading{
+    font-size: 2.5vw;
+    color: white;
+    margin: 2vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+#song #songContainer{
+    background-color: whitesmoke;
+    width: 15vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.songs{
+width: 13vw;
+height: 5vh;
+background-color: rgb(202, 198, 198);
+margin: 1.5vh;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: fantasy;
+font-size: 1.3vw;
+
+}
+.songs span{
+    margin: 0 1vh;
+}
+
+
+#centerContainer2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+#masterContainer{
+    margin-right: 6vw;
+    width: 100vw;
+    height: 20vh;
+    background-color: rgb(7, 7, 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+}
+
+#progressbar{
+    width: 60vw;
+    height: 2vh;
+    margin: 3vh;
+    
+}
+#player{
+    width: 15vw;
+    height: 5vh;
+    color: white;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#player i{
+    margin: 1vh;
+}
+
+
+#centerContainer1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#gifContainer{
+    margin-right: 8.5vh;
+    width: 60vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#gif{
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    margin-bottom: 10vh;
+}
+
+
+@keyframes rotate{
+    0%{
+        transform: perspective(2000px)  rotateY(0deg);
+    }
+    100%{
+        transform: perspective(2000px) rotateY(360deg) ;
+    }
+}
+
+@media (max-width: 1000px) {
+   #gif {
+    width: 25vw;
+    height: 35vh;
+   }
+
+}
+
+
+#gif span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#000);
+}
+#gif span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 2s;
+}
+#gif span:hover img{
+    transform: translateY(-50px) scale(1.2);
+
+    
+}
